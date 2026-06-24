@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You 💗 | Shibnath Hansda</title>
+  
+  <style>
+    /* ==========================================
+       COMBINED & CLEANED CSS
+       ========================================== */
+    *, *::after, *::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      margin: 0;
+      background: #0d0106; /* Dark Premium Aesthetic Background */
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Page 1: Welcome / Intro Section */
+    .night {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #15020a, #000000);
+      transition: opacity 1s ease-out, visibility 1s;
+    }
+
+    /* Typewriter Text Title */
+    .title {
+      color: #fff0f5;
+      text-shadow: 0 0 20px rgba(255, 39, 125, 0.6);
+      padding: 0 32px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 500px) {
+      .title {
+        letter-spacing: 8px;
+        font-size: 2.5rem;
+      }
+    }
+
+    @keyframes typing {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .title span {
+      opacity: 0;
+      animation: typing 1s ease forwards;
+      animation-delay: var(--delay);
+    }
+
+    /* Interactive Surprise Button */
+    .btn {
+      border: none;
+      width: 15em;
+      height: 5em;
+      border-radius: 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      background: #1C1A1C;
+      cursor: pointer;
+      transition: all 450ms ease-in-out;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .sparkle {
+      fill: #AAAAAA;
+      transition: all 800ms ease;
+    }
+
+    .text {
+      font-weight: 600;
+      color: #AAAAAA;
+      font-size: medium;
+    }
+
+    .btn:hover {
+      background: linear-gradient(rgba(255, 97, 97, 0.77), rgba(255, 39, 125, 0.84));
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+                  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+                  0px 0px 180px 0px #ff177f;
+      transform: translateY(-2px);
+    }
+
+    .btn:hover .text { color: white; }
+    .btn:hover .sparkle {
+      fill: white;
+      transform: scale(1.2);
+    }
+
+    /* Target original Canvas Particle setup */
+    #pinkboard {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Centered Love Text over the heart */
+    .love-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 48%;
+      transform: translateY(-50%);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 2.2rem;
+      letter-spacing: 4px;
+      text-shadow: 0 0 20px rgba(255, 30, 124, 0.8);
+      z-index: 2;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    /* Mouse Magic Sparkle Trail Elements */
+    .cursor-sparkle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff61a6;
+      box-shadow: 0 0 10px #ff1e7c, 0 0 20px #ff1e7c;
+      pointer-events: none;
+      z-index: 9999;
+      transform: scale(1);
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    /* Footer Styling */
+    #copy {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      z-index: 15;
+      color: #ffffff; /* 'Santali' text ko white kiya */
+    }
+
+    #copy a {
+      color: #ff61a6; /* '@ethicalhansda' link ko pink kiya */
+      text-decoration: none;
+      font-weight: bold;
+      transition: text-shadow 0.3s ease;
+    }
+
+    #copy a:hover {
+      text-shadow: 0 0 10px #ff1e7c; /* Hover karne par soft glow */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="night" id="introPage">
+    <div class="title" id="typewriterTitle"></div>
+
+    <button class="btn" onclick="startHeartProject()">
+      <svg class="sparkle" height="24" viewBox="0 0 24 24" width="24">
+        <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+      </svg>
+      <span class="text">Open</span>
+    </button>
+  </div>
+
+  <h1 class="love-text" id="loveMessage">I LOVE YOU 💗</h1>
+  <canvas id="pinkboard"></canvas>
+
+  <div id="copy">
+    <p class="text-center">Santali <a href="https://www.instagram.com/ethicalhansda/reels/#">@ethicalhansda</a></p>
+  </div>
+
+  <script>
+    // 1. Typewriter Animation Script
+    const textToType = "HAPPY WOMEN'S DAY MY SWEET GIRL!";
+    const titleContainer = document.getElementById('typewriterTitle');
+
+    textToType.split('').forEach((char, index) => {
+      const span = document.createElement('span');
+      span.style.setProperty('--delay', `${index * 0.08}s`);
+      span.innerHTML = char === ' ' ? '&nbsp;' : char;
+      titleContainer.appendChild(span);
+    });
+
+    // 2. Dynamic Mouse Sparkles Trail Implementation
+    window.addEventListener('mousemove', function(e) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'cursor-sparkle';
+      sparkle.style.left = e.clientX + 'px';
+      sparkle.style.top = e.clientY + 'px';
+      
+      const size = Math.random() * 8 + 4;
+      sparkle.style.width = size + 'px';
+      sparkle.style.height = size + 'px';
+      
+      document.body.appendChild(sparkle);
+      
+      setTimeout(() => {
+        sparkle.style.transform = 'scale(0.1) translateY(' + (Math.random() * 20 - 10) + 'px)';
+        sparkle.style.opacity = '0';
+      }, 50);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 550);
+    });
+
+    // 3. Mouse Tilt Variables for Heart Distortion
+    let mouseTiltX = 0;
+    let mouseTiltY = 0;
+    window.addEventListener('mousemove', function(e) {
+      mouseTiltX = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+      mouseTiltY = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
+    });
+
+    // 4. Click Transition Handler
+    function startHeartProject() {
+      const intro = document.getElementById('introPage');
+      const msg = document.getElementById('loveMessage');
+      
+      intro.style.opacity = '0';
+      setTimeout(() => {
+        intro.style.visibility = 'hidden';
+        msg.style.opacity = '1'; 
+        runOriginalParticles();  
+      }, 1000);
+    }
+
+    // 5. High Density Matrix Particles + Mouse Interaction Vector
+    function runOriginalParticles() {
+      var settings = {
+        particles: {
+          length:  1800, 
+          duration: 2.5, 
+          velocity: 120, 
+          effect: -0.65, 
+          size:      26, 
+        },
+      };
+
+      (function(){var b=0;var c=["ms","moz","webkit","o"];for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){window.requestAnimationFrame=window[c[a]+"RequestAnimationFrame"];window.cancelAnimationFrame=window[c[a]+"CancelAnimationFrame"]||window[c[a]+"CancelRequestAnimationFrame"]}if(!window.requestAnimationFrame){window.requestAnimationFrame=function(h,e){var d=new Date().getTime();var f=Math.max(0,16-(d-b));var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}}if(!window.cancelAnimationFrame){window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());
+
+      function pointOnHeart(t) {
+        return new Point(
+          160 * Math.pow(Math.sin(t), 3),
+          130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t)
+        );
+      }
+
+      var Point = (function() {
+        function Point(x, y) {
+          this.x = (typeof x !== 'undefined') ? x : 0;
+          this.y = (typeof y !== 'undefined') ? y : 0;
+        }
+        Point.prototype.clone = function() {
+          return new Point(this.x, this.y);
+        };
+        Point.prototype.length = function(length) {
+          if (typeof length == 'undefined')
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+          this.normalize();
+          this.x *= length;
+          this.y *= length;
+          return this;
+        };
+        Point.prototype.normalize = function() {
+          var length = this.length();
+          this.x /= length;
+          this.y /= length;
+          return this;
+        };
+        return Point;
+      })();
+
+      var Particle = (function() {
+        function Particle() {
+          this.position = new Point();
+          this.velocity = new Point();
+          this.acceleration = new Point();
+          this.age = 0;
+        }
+        Particle.prototype.initialize = function(x, y, dx, dy) {
+          this.position.x = x;
+          this.position.y = y;
+          this.velocity.x = dx;
+          this.velocity.y = dy;
+          this.acceleration.x = dx * settings.particles.effect;
+          this.acceleration.y = dy * settings.particles.effect;
+          this.age = 0;
+        };
+        Particle.prototype.update = function(deltaTime) {
+          this.position.x += this.velocity.x * deltaTime;
+          this.position.y += this.velocity.y * deltaTime;
+          this.velocity.x += this.acceleration.x * deltaTime;
+          this.velocity.y += this.acceleration.y * deltaTime;
+          this.age += deltaTime;
+        };
+        Particle.prototype.draw = function(context, image) {
+          function ease(t) {
+            return (--t) * t * t + 1;
+          }
+          var size = settings.particles.size * ease(this.age / settings.particles.duration);
+          context.globalAlpha = 1 - this.age / settings.particles.duration;
+          context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
+        };
+        return Particle;
+      })();
+
+      var ParticlePool = (function() {
+        var particles,
+            firstActive = 0,
+            firstFree   = 0,
+            duration    = settings.particles.duration;
+
+        function ParticlePool(length) {
+          particles = new Array(length);
+          for (var i = 0; i < particles.length; i++)
+            particles[i] = new Particle();
+        }
+        ParticlePool.prototype.add = function(x, y, dx, dy) {
+          particles[firstFree].initialize(x, y, dx, dy);
+          firstFree++;
+          if (firstFree == particles.length) firstFree = 0;
+          if (firstActive == firstFree) {
+            firstActive++;
+            if (firstActive == particles.length) firstActive = 0;
+          }
+        };
+        ParticlePool.prototype.update = function(deltaTime) {
+          var i;
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].update(deltaTime);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].update(deltaTime);
+            for (i = 0; i < firstFree; i++)
+              particles[i].update(deltaTime);
+          }
+          while (particles[firstActive].age >= duration && firstActive != firstFree) {
+            firstActive++;
+            if (firstActive == particles.length) firstActive = 0;
+          }
+        };
+        ParticlePool.prototype.draw = function(context, image) {
+          var i;
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].draw(context, image);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].draw(context, image);
+            for (i = 0; i < firstFree; i++)
+              particles[i].draw(context, image);
+          }
+        };
+        return ParticlePool;
+      })();
+
+      (function(canvas) {
+        var context = canvas.getContext('2d'),
+            particles = new ParticlePool(settings.particles.length),
+            particleRate = settings.particles.length / settings.particles.duration,
+            time;
+
+        var image = (function() {
+          var canvas = document.createElement('canvas'),
+              context = canvas.getContext('2d');
+          canvas.width = settings.particles.size;
+          canvas.height = settings.particles.size;
+          
+          function to(t) {
+            var point = pointOnHeart(t);
+            point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
+            point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
+            return point;
+          }
+          
+          context.beginPath();
+          var t = -Math.PI;
+          var point = to(t);
+          context.moveTo(point.x, point.y);
+          while (t < Math.PI) {
+            t += 0.01;
+            point = to(t);
+            context.lineTo(point.x, point.y);
+          }
+          context.closePath();
+          
+          context.fillStyle = '#ff1e7c'; 
+          context.fill();
+          
+          var image = new Image();
+          image.src = canvas.toDataURL();
+          return image;
+        })();
+
+        let currentTiltX = 0, currentTiltY = 0;
+
+        function render() {
+          requestAnimationFrame(render);
+          var newTime = new Date().getTime() / 1000,
+              deltaTime = newTime - (time || newTime);
+          time = newTime;
+          
+          context.clearRect(0, 0, canvas.width, canvas.height);
+
+          currentTiltX += (mouseTiltX * 45 - currentTiltX) * 0.08;
+          currentTiltY += (mouseTiltY * 45 - currentTiltY) * 0.08;
+
+          var amount = particleRate * deltaTime;
+          for (var i = 0; i < amount; i++) {
+            var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+            var dir = pos.clone().length(settings.particles.velocity);
+            
+            let spawnX = (canvas.width / 2) + pos.x + currentTiltX;
+            let spawnY = (canvas.height / 2) - pos.y + currentTiltY;
+            
+            particles.add(spawnX, spawnY, dir.x, -dir.y);
+          }
+          
+          particles.update(deltaTime);
+          particles.draw(context, image);
+        }
+
+        function onResize() {
+          canvas.width = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+        }
+        window.onresize = onResize;
+
+        setTimeout(function() {
+          onResize();
+          render();
+        }, 10);
+      })(document.getElementById('pinkboard'));
+    }
+  </script>
+</body>
+</html>
