@@ -1,98 +1,68 @@
-# 💖 Interactive Women's Day Love Website
+# 💖 Happy My Girl
 
-A beautifully crafted interactive love-themed website built using **HTML, CSS, and JavaScript**. This project combines modern UI effects, particle animations, mouse interactions, and a romantic aesthetic to create a memorable experience.
+A romantic and interactive web experience created with **HTML, CSS, and JavaScript**. Designed as a special surprise, this website features beautiful animations, heart-shaped particle effects, glowing interactions, and a smooth user experience.
+
+## 🌐 Live Demo
+
+**Website:** https://happymygirl.netlify.app
 
 ## ✨ Features
 
-* 🎀 Animated Typewriter Welcome Screen
-* 💗 Interactive Heart Particle Animation
-* ✨ Mouse Sparkle Trail Effect
-* 🎨 Premium Dark-Pink Aesthetic Design
-* ❤️ Smooth Transition Between Screens
-* 🖱️ Mouse-Based Heart Movement & Distortion
-* 📱 Fully Responsive Layout
-* 🌟 Glowing Text and Button Effects
-* ⚡ Pure HTML, CSS & JavaScript (No Frameworks)
+* 💌 Animated Welcome Screen
+* ⌨️ Typewriter Text Effect
+* ❤️ Interactive Heart Particle Animation
+* ✨ Mouse Sparkle Trail
+* 🎨 Premium Pink & Dark Theme
+* 🌟 Smooth Page Transitions
+* 🖱️ Dynamic Mouse Interaction
+* 📱 Responsive Design
+* ⚡ Lightweight & Fast Performance
 
-## 🚀 Live Preview
-
-Deploy easily using:
-
-* GitHub Pages
-* Netlify
-* Vercel
-
-## 📂 Project Structure
-
-```text
-project/
-│
-├── index.html
-├── README.md
-└── assets/
-```
-
-## 🛠️ Technologies Used
+## 🛠️ Built With
 
 * HTML5
 * CSS3
 * JavaScript (Vanilla JS)
 * Canvas API
-* CSS Animations
-* Particle System
 
-## 🎯 How It Works
+## 📸 Project Preview
 
-1. User lands on a welcome screen.
-2. Animated text appears with a typewriter effect.
-3. Clicking the **Open** button triggers a smooth transition.
-4. A dynamic heart-shaped particle animation starts.
-5. Mouse movements create glowing sparkles and interactive heart motion.
+A personalized love-themed website featuring interactive animations and visual effects designed to create a memorable experience.
 
-## 📸 Highlights
+## 🚀 Deployment
 
-* Real-time particle rendering
-* Interactive visual effects
-* Romantic and modern UI
-* Lightweight and fast loading
+This project is deployed on Netlify and can be accessed directly through the live demo link.
 
-## 🔧 Installation
+## 📂 Project Structure
 
-Clone the repository:
-
-```bash
-git clone https://github.com/Hero24-x/Womens-Day
+```text
+.
+├── index.html
+├── README.md
+└── assets/
 ```
 
-Open:
+## 💡 Future Improvements
 
-```bash
-index.html
-```
-
-in your browser.
-
-## 💡 Customization
-
-You can easily modify:
-
-* Welcome Message
-* Love Text
-* Colors & Themes
-* Particle Density
-* Button Design
-* Footer Links
-
-## 📄 License
-
-This project is available under the MIT License.
+* Background Music Support
+* Photo Gallery Section
+* Memory Timeline
+* Love Letter Popup
+* Countdown Timer
+* Custom Domain Integration
 
 ## 👨‍💻 Author
 
 **Shibnath Hansda**
 
-Instagram: @ethicalhansda
+Instagram: https://www.instagram.com/ethicalhansda
+
+GitHub: https://github.com/Hero24-x
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
 
 ---
 
-Made with ❤️ using HTML, CSS & JavaScript
+Made with ❤️ for someone special.
