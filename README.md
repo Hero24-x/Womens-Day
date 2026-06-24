@@ -61,7 +61,7 @@ project/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/love-website.git
+git clone https://github.com/Hero24-x/Womens-Day
 ```
 
 Open:
